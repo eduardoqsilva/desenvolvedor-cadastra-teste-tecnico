@@ -25,7 +25,6 @@ export const GlobalStyled = createGlobalStyle`
     margin-top: 10px;
   }
   *::-webkit-scrollbar-track {
-    border-radius: 5px;
     background-color: ${(props) => props.theme.colors.white01};
   }
 
@@ -38,7 +37,6 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   *::-webkit-scrollbar-thumb {
-    border-radius: 5px;
     background-color:${(props) => props.theme.colors.primary};
   }
 
