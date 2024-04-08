@@ -1,7 +1,9 @@
+import { Home } from './pages/home'
+
 function App() {
   return (
     <>
-      <h1>Desenvolvedor Cadastra</h1>
+      <Home />
     </>
   )
 }
