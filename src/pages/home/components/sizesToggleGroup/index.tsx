@@ -1,11 +1,10 @@
 import { ToggleGroupItem, ToggleGroupRoot } from './sizesToggleGroup.styled'
-
-const sizes = ['P', 'M', 'G', 'GG', 'U', '36', '38', '40']
+import { Sizes } from '../../../../mocks/filters'
 
 export function SizesToggleGroup() {
   return (
     <ToggleGroupRoot type="single">
-      {sizes.map((item) => (
+      {Sizes.map((item) => (
         <ToggleGroupItem key={item} value={item}>
           {item}
         </ToggleGroupItem>
