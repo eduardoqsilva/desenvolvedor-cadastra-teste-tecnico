@@ -12,12 +12,12 @@ export const CardContainer = styled.article`
   align-items: center;
   gap: 10px;
 
-  box-shadow:
+  /* box-shadow:
     0px 27px 80px 0px rgba(0, 0, 0, 0.04),
     0px 9.855px 29.201px 0px rgba(0, 0, 0, 0.03),
     0px 4.785px 14.177px 0px rgba(0, 0, 0, 0.02),
     0px 2.346px 6.95px 0px rgba(0, 0, 0, 0.02),
-    0px 0.927px 2.748px 0px rgba(0, 0, 0, 0.01);
+    0px 0.927px 2.748px 0px rgba(0, 0, 0, 0.01); */
 
   & .title {
     font-weight: 400;
