@@ -4,8 +4,17 @@ import * as Select from '@radix-ui/react-select'
 export const SelectContainer = styled.div`
   height: auto;
   width: 100%;
+
   position: absolute;
-  top: -70px;
+  top: -75px;
+
+  @media (max-width: 1590px) {
+    transform: translateX(-172px);
+  }
+  @media (max-width: 800px) {
+    position: initial;
+    transform: translateX(0);
+  }
 `
 
 export const SelectContent = styled(Select.Content)`

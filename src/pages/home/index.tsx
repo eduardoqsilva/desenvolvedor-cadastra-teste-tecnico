@@ -14,6 +14,7 @@ import {
 import { Product, filterProducts } from '../../api'
 import { useSearchParams } from 'react-router-dom'
 import { UsefiltersParams } from '../../hooks/useFiltersParams'
+import { Footer } from '../../components/footer'
 
 export function Home() {
   const [products, setProducts] = useState<Product[]>([])
@@ -59,6 +60,7 @@ export function Home() {
           </CardsGrid>
         </HomeGridWrapper>
       </HomeContent>
+      <Footer />
     </HomeContainer>
   )
 }

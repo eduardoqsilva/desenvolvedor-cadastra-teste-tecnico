@@ -32,6 +32,10 @@ export const FiltersContainer = styled.aside`
   padding: 16px;
   border-radius: 16px;
   transition: all 0.1s ease-in;
+
+  @media (max-width: 800px) {
+    min-height: fit-content;
+  }
 `
 
 export const AccordionRoot = styled(Accordion.Root)`
@@ -54,6 +58,7 @@ export const AccordionTrigger = styled(Accordion.Trigger)`
   line-height: normal;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  text-align: left;
   color: ${(props) => props.theme.colors.gray02};
   border: none;
 

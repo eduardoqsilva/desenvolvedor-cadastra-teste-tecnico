@@ -17,15 +17,22 @@ export const HomeContent = styled.div`
 
 export const HomeGridWrapper = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   height: 100%;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 2fr 6fr 1fr;
+  grid-template-columns: 2fr 6fr 0px;
   grid-template-rows: 100%;
   grid-template-areas: 'filters products';
-  gap: 32px;
+  padding: 0 24px 0 24px;
+  gap: 16px;
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 `
 
 export const CardsGrid = styled.main`
@@ -51,6 +58,7 @@ export const TitleCategory = styled.h1`
 
   max-width: 1300px;
   margin: 40px auto;
+  padding: 0 24px 0 24px;
 `
 
 export const OrderByContainer = styled.div`

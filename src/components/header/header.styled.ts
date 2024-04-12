@@ -4,7 +4,6 @@ export const HeaderContainer = styled.header`
   width: 100vw;
   height: auto;
   background-color: ${(props) => props.theme.colors.white01};
-  padding: 24px;
 
   border-bottom: 2px solid ${(props) => props.theme.colors.gray01};
 `
@@ -15,6 +14,7 @@ export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 24px;
 
   & .logo {
     width: 165px;

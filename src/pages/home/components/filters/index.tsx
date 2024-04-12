@@ -9,11 +9,30 @@ import { CaretDown } from '@phosphor-icons/react'
 import { RadioGroup } from '../RadioGroup'
 import { SizesToggleGroup } from '../sizesToggleGroup'
 import { Colors, PriceRange } from '../../../../mocks/filters'
+import { useEffect, useState } from 'react'
 
 export function Filters() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800)
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <FiltersContainer>
-      <AccordionRoot type="multiple" defaultValue={['cores']}>
+      <AccordionRoot
+        type="multiple"
+        defaultValue={['cores', 'tamanhos', 'faixaPreco']}
+        value={isMobile ? [] : ['cores', 'tamanhos', 'faixaPreco']}
+      >
         <Accordion.Item value="cores">
           <Accordion.Header>
             <AccordionTrigger>
