@@ -9,11 +9,20 @@ import {
   SelectViewport,
 } from './orderBy.styled'
 import { CaretDown, Check } from '@phosphor-icons/react/dist/ssr'
+import { useSearchParams } from 'react-router-dom'
 
 export function OrderBy() {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const paramsObj = Object.fromEntries(searchParams)
+  function handleChangeItem(e: string) {
+    if (e) {
+      setSearchParams({ ...paramsObj, order: e })
+    }
+  }
+
   return (
     <SelectContainer>
-      <Select.Root>
+      <Select.Root onValueChange={handleChangeItem}>
         <SelectTrigger>
           <Select.Value placeholder={'Ordenar Por:'} />
           <Select.Icon>

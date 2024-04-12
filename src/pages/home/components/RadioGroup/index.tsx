@@ -5,16 +5,26 @@ import {
   RadioRoot,
 } from './radioGroup.styled'
 import { RadioGroupProps } from './radioGroupTypes'
+import { useSearchParams } from 'react-router-dom'
 
-export function RadioGroup({ items }: RadioGroupProps) {
+export function RadioGroup({ items, name }: RadioGroupProps) {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const paramsObj = Object.fromEntries(searchParams)
+
+  function handleChangeItem(e: string) {
+    if (e) {
+      setSearchParams({ ...paramsObj, [name]: e })
+    }
+  }
+
   return (
-    <RadioRoot>
+    <RadioRoot onValueChange={handleChangeItem}>
       {items.map((item, key) => (
         <ItemContainer key={key}>
-          <RadioItem id={'id' + key} value={item.value}>
+          <RadioItem id={name + key} value={item.value}>
             <RadioIndicator />
           </RadioItem>
-          <label htmlFor={'id' + key}>{item.text}</label>
+          <label htmlFor={name + key}>{item.text}</label>
         </ItemContainer>
       ))}
     </RadioRoot>

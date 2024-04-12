@@ -22,7 +22,7 @@ export function Filters() {
             </AccordionTrigger>
           </Accordion.Header>
           <AccordionContent>
-            <RadioGroup items={Colors} />
+            <RadioGroup name="color" items={Colors} />
           </AccordionContent>
         </Accordion.Item>
 
@@ -46,7 +46,7 @@ export function Filters() {
             </AccordionTrigger>
           </Accordion.Header>
           <AccordionContent>
-            <RadioGroup items={PriceRange} />
+            <RadioGroup name="range" items={PriceRange} />
           </AccordionContent>
         </Accordion.Item>
       </AccordionRoot>

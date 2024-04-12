@@ -5,4 +5,5 @@ interface ItensType {
 
 export interface RadioGroupProps {
   items: ItensType[]
+  name: string
 }
