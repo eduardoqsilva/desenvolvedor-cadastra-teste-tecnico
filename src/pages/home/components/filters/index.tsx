@@ -12,11 +12,15 @@ import { Colors, PriceRange } from '../../../../mocks/filters'
 import { useEffect, useState } from 'react'
 
 export function Filters() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [value, setValue] = useState<string[]>([])
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 800)
+      if (window.innerWidth <= 800) {
+        setValue([])
+      } else {
+        setValue(['cores', 'tamanhos', 'faixaPreco'])
+      }
     }
 
     handleResize()
@@ -26,12 +30,17 @@ export function Filters() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  function hanfleChangeValue(e: string[]) {
+    setValue(e)
+  }
+
   return (
     <FiltersContainer>
       <AccordionRoot
         type="multiple"
-        defaultValue={['cores', 'tamanhos', 'faixaPreco']}
-        value={isMobile ? [] : ['cores', 'tamanhos', 'faixaPreco']}
+        defaultValue={['cores']}
+        onValueChange={hanfleChangeValue}
+        value={value}
       >
         <Accordion.Item value="cores">
           <Accordion.Header>
