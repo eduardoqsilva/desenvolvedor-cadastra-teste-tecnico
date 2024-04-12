@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Card } from '../../components/card'
 import { Header } from '../../components/header'
 import { Filters } from './components/filters'
@@ -10,8 +11,30 @@ import {
   TitleCategory,
   OrderByContainer,
 } from './home.styled'
+import { Product, filterProducts } from '../../api'
+import { useSearchParams } from 'react-router-dom'
+import { UsefiltersParams } from '../../hooks/useFiltersParams'
 
 export function Home() {
+  const [products, setProducts] = useState<Product[]>([])
+  const [searchParams, setSearchParams] = useSearchParams()
+  const filters = UsefiltersParams()
+
+  async function GetProducts() {
+    const filteredProducts = await filterProducts({ ...filters })
+    setProducts(filteredProducts)
+  }
+
+  useEffect(() => {
+    GetProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams, filters])
+
+  useEffect(() => {
+    setSearchParams({})
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <HomeContainer>
       <Header />
@@ -23,9 +46,16 @@ export function Home() {
             <OrderBy />
           </OrderByContainer>
           <CardsGrid>
-            {new Array(20).fill('').map((_, key) => (
-              <Card key={key} />
-            ))}
+            {products &&
+              products.map((item, key) => (
+                <Card
+                  img={item.image}
+                  price={item.price}
+                  split={item.parcelamento}
+                  title={item.name}
+                  key={key}
+                />
+              ))}
           </CardsGrid>
         </HomeGridWrapper>
       </HomeContent>
