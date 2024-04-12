@@ -1,76 +1,33 @@
-# Venha ser um desenvolvedor da Cadastra
+# Projeto de E-commerce cadastra
 
-Olá! Somos a Cadastra, uma Next-Gen Company que oferece soluções globais em marketing, tecnologia, estratégia de negócios, commerce, dados e analytics. Este desafio é voltado para o nosso Centro de Excelência (COE) de Commerce, especializado em implantação, migração, evolução e otimização de e-commerce.  Contamos com escritórios em 5 países, mas num formato de trabalho 100% home office.
+Para instalar as dependências só é preciso executar o comando: `npm i`
 
-Estamos em busca de Pessoas Desenvolvedoras `Front-end`, com sólidos conhecimentos em HTML, CSS e TS para projetar interfaces e entregar a melhor experiência para os consumidores visando sempre a otimização do código e agilidade no desenvolvimento.
+Para dar `start` no server e nos processos para desenvolvimento é necessário rodar o comando: `npm start `
 
-## O que procuramos
-
-### Requisitos Obrigatórios
-
-- Html5, css3;
-- Javascript/Typescript;
-- Consumo de APIs.
-- Versionamento Git;
-- Grunt/gulp;
-- Sass/less;
-- Nodejs
-- Sites responsivos;
-- Iniciativa, criatividade e colaboração;
-- Boas práticas: reutilização de código, semântica, organização, performance.
-
-### Desejáveis:
-
-- Experiência com algum CMS
-- Conhecimento/Experiência em Vtex
-- Nodejs
-
-----
-
-## Como se candidatar a vaga
-
-- [Crie um fork desse projeto;](https://github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra/fork)
-- No seu fork, codifique o layout seguindo as instruções abaixo;
-- Atualize o readme com as instruções necessárias para rodar o seu código;
-- Adicione também seu e-mail de contato ao readme do projeto ( caso seu e-mail do github esteja privado )
-- envie para [vinicius.delfino@cadastra.com](mailto:vinicius.delfino@cadastra.com?subject=Vaga%20DEV%20-%20Cadastra)
+Uma vez que o comando é dado 2 servidores serão iniciados, sendo eles:
+ - <b>front-end</b> que roda na porta 3000. No qual pode ser acessado pela url: http://localhost:3000/
+ - <b>json-server</b> uma api com a lista de produtos que roda na porta 5000. A url para acessar os produtos é:  http://localhost:5000/products
 
 
-**obs.**: link do projeto [github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra](https://github.com/Cadastra-Next-Gen-Company/desenvolvedor-cadastra)
+## Motivo da não conclusão de todas as tasks
 
-### Instruções para o teste
+Este projeto de e-commerce não foi completamente finalizado devido a restrições de tempo e a minha responsabilidade com um projeto de um cliente grande em que estou trabalhando como freelancer. Embora tenha feito o possível para atender aos requisitos do projeto, houve algumas funcionalidades que não puderam ser concluídas dentro do prazo estabelecido.
 
-O layout se encontra no [figma](https://www.figma.com/file/Z5RCG3Ewzwm7XIPuhMUsBZ/Desafio-Cadastra?type=design&node-id=0%3A1&mode=design&t=A0G2fRjMSrcQjchw-1).
+## Requisitos Atendidos
 
-### Dependências
+- **HTML5 e CSS3:** Utilizei React para agilizar o desenvolvimento, garantindo a utilização de HTML5 e CSS3 no projeto.
+- **Typescript:** Implementei o Typescript conforme solicitado.
+- **Requisição a API para obter os produtos:** Integrei a API para obter os produtos necessários.
+- **Funcionalidade de Filtrar Produtos:** Implementei a funcionalidade de filtragem por cor, tamanho e preço.
+- **Funcionalidade de Adicionar Produto ao Carrinho:** Iniciei a implementação desta funcionalidade, porém só foi possível mostrar o número de produtos no carrinho.
+- **Não utilizar Bootstrap, Foundation Css, Semantic UI ou semelhantes:** Atendi a este requisito, embora tenha utilizado styled-components para estilização.
+- **Responsividade:** O projeto é responsivo, embora não tenha ficado exatamente como no design do Figma, por falta de tempo para ajustes finos.
 
-O projeto possui um setup pronto no qual há a necessidade de possuir o nodejs instalado na versão 14 ou superior.
+## Funcionalidades não implementadas
 
-Para instalar as dependências só é preciso executar o comando: `npm install`
+- **Funcionalidade de Carregar Mais Produtos:** Não consegui implementar esta funcionalidade dentro do prazo devido às demandas do projeto do cliente.
+- **Funcionalidade de Adicionar Produto ao Carrinho:** Iniciei a implementação desta funcionalidade, porém só foi possível mostrar o número de produtos no carrinho.
 
-O dar start no server e nos processos para desenvolvimento é necessário rodar o comando: `npm start `
+## Considerações Finais
 
-Uma ver que o comando é dado ele irá levantar 2 servidores, sendo eles:
- - um para acessar o front-end que roda na porta 3000. No qual pode ser acessado pela url: http://localhost:3000
- - um para o json-server que irá export uma api com a lista de produtos que roda na porta 5000. Para acessar os produtos é na url:  http://localhost:5000/products
-
-### Objetivo
-
-O objetivo desse desafio é avaliar a seus conhecimentos fundamentais de front end, por isso pedimos que não utilize nenhum framework, porem caso deseje utilizar frameworks como react, é possível adicionar ao setup.
-### Obrigatório
-
-- HTML5 e CSS3
-- Typescript
-- Requisição a API para obter os produtos
-- Funcionalidade: Filtrar produtos por cor, tamanho e preço.
-- Funcionalidade: Adicionar produto ao carrinho.
-- Funcionalidade: Carregar mais produtos.
-- Não utilizar Bootstrap, Foundation Css, Semantic ui ou semelhantes ;
-- Responsividade
-
-#### Bônus
-
-- Typescript com clean code
-- Adição de processo no gulp para otimizar imagens
-
-##### Dúvidas: [vinicius.delfino@cadastra.com](mailto:vinicius.delfino@cadastra.com?subject=Dúvida%20Vaga%20DEV%20-%20Cadastra)
+Peço desculpas pela não conclusão de todas as tasks do projeto. Agradeço a compreensão e estou disponível para quaisquer esclarecimentos adicionais.
